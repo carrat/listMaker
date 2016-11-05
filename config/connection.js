@@ -26,7 +26,7 @@ var source = {
         host: 'ehc1u4pmphj917qf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         user: 'lxc0omv0zh7vwbbv',
         password: "xo0hv29fp56y5w4l",
-        database: "listmaker_db"
+        database: "igbrdxs9wqtwcg3p"
     }
 }
 
