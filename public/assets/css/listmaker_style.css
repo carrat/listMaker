@@ -50,8 +50,9 @@ i:hover {
 
 i {
 	color: #FFFFFF;
-	padding-left: 2px;
-	padding-right: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	display: inline;
 }
 
 .jumbotron {
@@ -182,7 +183,7 @@ hr {
 .listBox {
 	padding: 20px;
 	border: 1px solid #bc0909;
-	padding-right: 40px;
+	padding-right: 10px;
 	padding-bottom: 10px;
 	background-color: #a40000;
 	box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.1);
@@ -229,11 +230,7 @@ hr {
 	border: 1px solid #ffffff;
 }
 
-i {
-	padding-right: 3px;
-	padding-left: 3px;
 
-}
 
 .fa {
 	font-size: 20px;
@@ -364,6 +361,11 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 
 #matchImg {
 	max-width: 90%;
+}
+
+.childRow {
+	width: 100%;
+	padding-right: 10px;
 }
 
 
