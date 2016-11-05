@@ -33,7 +33,7 @@ a {
 }
 
 a:hover {
-	color: #e7324b;
+	color: #ff8c26;
 	font-style: none;
 	font-variant: none;
 	text-decoration: none;
@@ -42,7 +42,7 @@ a:hover {
 
 
 i:hover {
-	color: #e7324b;
+	color: #ff8c26;
 	font-style: none;
 	font-variant: none;
 	text-decoration: none;
@@ -61,15 +61,22 @@ i {
 	margin-top: 20px;
 	box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.1);
 	padding: 20px;
+	padding-bottom: 5px;
+	padding-left: 5px;
 	border: 1px solid #bc0909;
+}
+
+.container .jumbotron {
+	padding-left: 30px;
 }
 
 .jumbotron h1 {
 	color: #ffFFFF;
 	font-size: 70px;
 	font-family: 'Sacramento', cursive;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 	margin-bottom: 0px;
+	padding-left: 10px;
 }
 
 .jumbotron h2 {
@@ -78,6 +85,7 @@ i {
 	font-family: 'Bitter', serif;
 	padding-top: 0px;
 	margin-top: 0px;
+	padding-left: 20px;
 }
 
 .container {
@@ -99,7 +107,14 @@ i {
 }
 
 #credits {
-	color: #de1a1a;
+	color: #6b0101;
+}
+
+.santa {
+	max-height: 130px;
+	display: inline;
+	padding-bottom: 0px;
+	padding-right: 0px;
 }
 
 #credits a {
@@ -199,7 +214,7 @@ hr {
 }
 
 .btn-primary {
-	background-color: #e42e2e;
+	background-color: #bb1818;
 	border: 1px solid #970000;
 	padding-top: 7px;
 	padding-bottom: 7px;
@@ -215,13 +230,15 @@ hr {
 }
 
 .btn-secondary {
-	background-color: #e42e2e;
+	background-color: #bb1818;
 	border: 1px solid #970000;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	margin-bottom: 5px;
-	font-size: 10px;
+	margin-top: 5px;
+	font-size: 12px;
 	box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
+	color: #FFFFFF;
+	font-weight: bold;
 }
 
 .btn-secondary:hover {
@@ -233,7 +250,7 @@ hr {
 
 
 .fa {
-	font-size: 20px;
+	font-size: 24px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
@@ -297,13 +314,23 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
 	padding-bottom: 0px;
 	padding-top: 10px;
 	text-align: center;
-	background-color: #7b0404;
+	background-color: #a40000;
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	border-top: 1px solid #4b0404;
-	color: #de1a1a;
+	border-top: 1px solid #bc0909;
+	color: #6b0101;
 
+}
+.elf {
+    display: inline-block;
+    height: 120px;
+    padding-right: 20px;
+    vertical-align: top;
+}
+
+.inlineForm {
+	display: inline-block;
 }
 
 .footer a {
