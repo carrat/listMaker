@@ -56,7 +56,7 @@ i {
 }
 
 .jumbotron {
-	background-color: #a40000;
+	background-color: rgba(151,0,0,.6);
 	color: #FFFFFF;
 	margin-top: 20px;
 	box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.1);
