@@ -1,0 +1,49 @@
+
+<!-- this is index.handlebars -->
+<h2>Nice List</h2>
+
+<ul>
+  {{#each children}}
+    {{#unless this.naughty}}
+      <li>
+        {{this.child_name}}
+
+        <form action="/children/naughty/{{this.id}}" method="POST">
+          <button type="button">Naughtify</button>
+        </form>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Naughty List</h2>
+
+<ul>
+  {{#each children}}
+    {{#if this.naughty}}
+      <li>
+        {{this.child_name}}
+<!-- Add them back to the Nice List -->
+        <form action="/children/nice/{{this.id}}" method="POST">
+          <button type="button"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
+        </form>
+<!-- Delete name -->
+        <form action="/children/delete/{{this.id}}?_method=DELETE" method="POST">
+          <button type="button"><i class="fa fa-window-close-o" aria-hidden="true"></i></button>
+        </form>
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Child to List</h2>
+
+<form method="POST" action="/children/create">
+
+  <div class="form-group">
+    <label for="name">Child's Name:</label>
+    <input type="text" id="name" name="name">
+  </div>
+
+  <button type="button">Add Child</button>
+</form>
