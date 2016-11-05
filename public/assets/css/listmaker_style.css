@@ -4,9 +4,13 @@
 
 html {
 	/*background-color: #970000;*/
-	background-image: url(http://i.huffpost.com/gen/2339018/images/o-SANTA-CLAUS-LIST-facebook.jpg);
+	
+	
+	background-image: url(../img/santa.png);
 	background-size: cover;
 	min-height: 100%;
+	background-color: rgba(151,0,0,.99);
+	
 }
 
 body {
@@ -15,8 +19,10 @@ body {
 	font-size: 15px;
 	color: #FFFFFF;
 	margin-bottom: 0px;
+	background-color: transparent;
 	/*background-color: #970000;*/
 	height: 100%;
+	
 }
 
 a {
@@ -88,6 +94,7 @@ i {
 	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 	border: 0px none;
 	padding: 20px;
+	/*background-color: rgba(151,0,0,.6);*/
 }
 
 #credits {
