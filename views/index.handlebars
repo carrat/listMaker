@@ -1,49 +1,70 @@
 
 <!-- this is index.handlebars -->
-<h2>Nice List</h2>
 
-<ul>
-  {{#each children}}
-    {{#unless this.naughty}}
-      <li>
-        {{this.child_name}}
-
-        <form action="/children/naughty/{{this.id}}" method="POST">
-          <button type="button">Naughtify</button>
-        </form>
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Naughty List</h2>
-
-<ul>
-  {{#each children}}
-    {{#if this.naughty}}
-      <li>
-        {{this.child_name}}
-<!-- Add them back to the Nice List -->
-        <form action="/children/nice/{{this.id}}" method="POST">
-          <button type="button"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
-        </form>
-<!-- Delete name -->
-        <form action="/children/delete/{{this.id}}?_method=DELETE" method="POST">
-          <button type="button"><i class="fa fa-window-close-o" aria-hidden="true"></i></button>
-        </form>
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Child to List</h2>
-
-<form method="POST" action="/children/create">
-
-  <div class="form-group">
-    <label for="name">Child's Name:</label>
-    <input type="text" id="name" name="name">
+<div class="row" id="lists">
+  <div class="col-sm-6">
+    <h2><i class="fa fa-smile-o fa-3x" aria-hidden="true"></i> Nice List</h2>
+    <div class="listBox">
+      {{#each children}}
+        {{#unless this.naughty}}
+          <div class="row childRow">
+            <div class="col-sm-10">
+              <h3>{{this.child_name}}</h3>
+            </div>
+            <div class="col-sm-2">
+              <form action="/children/naughty/{{this.id}}" method="POST">
+                <button type="submit"  class="btn btn-secondary"  title="Move to Naughty List">Naughtify</button>
+              </form>
+            </div>
+          </div>
+        {{/unless}}
+      {{/each}}
+    </div>
   </div>
 
-  <button type="button">Add Child</button>
-</form>
+  <div class="col-sm-6">
+    <h2 class="naughty"><i class="fa fa-frown-o fa-3x" aria-hidden="true"></i> Naughty List</h2>
+    <div class="listBox">
+      {{#each children}}
+        {{#if this.naughty}}
+          <div class="row childRow">
+            <div class="col-sm-10">
+              <h3>{{this.child_name}}</h3>
+            </div>
+
+            <div class="col-sm-1">
+      <!-- Add them back to the Nice List -->
+
+              <form action="/children/nice/{{this.id}}" method="POST">
+                <button type="submit"  class="btn-icon"   title="Move to Nice List"><i class="fa fa-smile-o" aria-hidden="true"></i></button>
+              </form>
+            </div>
+            <div class="col-sm-1">
+      <!-- Delete name -->
+              <form action="/children/delete/{{this.id}}?_method=DELETE" method="POST">
+                <button type="submit"   title="Delete Child" class="btn-icon"><i class="fa fa-window-close-o aria-hidden="true"></i></button>
+              </form>
+            </div>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h2>Add a Child to List</h2>
+
+    <form method="POST" action="/children/create">
+
+      <div class="form-group">
+        <label for="name">Child's Name:</label>
+        <input type="text" id="name" name="name">
+
+      <button type="submit" class="btn btn-primary">Add Child</button>
+      </div>
+    </form>
+  </div>
+</div>

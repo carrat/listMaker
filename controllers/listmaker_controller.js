@@ -9,7 +9,7 @@ var listmaker = require('../models/listmaker.js');
 // define routes
 router.get('/', function (req, res) {
 	listmaker.selectAll(function (data) {
-		var itemsObj = { items: data };
+		var itemsObj = { children: data };
 		console.log(itemsObj);
 		res.render('index', itemsObj);
 	});
@@ -28,7 +28,7 @@ router.post('/children/naughty/:id', function (req, res) {
 });
 
 router.post('/children/nice/:id', function (req, res) {
-	listmaker.naughtyOne(req.params.id, function () {
+	listmaker.niceOne(req.params.id, function () {
 		res.redirect('/');
 	});
 });

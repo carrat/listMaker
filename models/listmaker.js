@@ -4,28 +4,28 @@ var orm = require('../config/orm.js');
 //define listmaker model
 var listmaker = {
 	selectAll: function (cb) {
-		orm.selectAll('children', function (res) {
+		orm.selectAll(function (res) {
 			cb(res);
 		});
 	},
 	// cols and vals are arrays
 	insertOne: function (childName, cb) {
-		orm.insertOne('children', childName, function (res) {
+		orm.insertOne(childName, function (res) {
 			cb(res);
 		});
 	},
 	naughtyOne: function (childID, cb) {
-		orm.updateOne('children', childID, function (res) {
+		orm.naughtyOne(childID, function (res) {
 			cb(res);
 		});
 	},
 	niceOne: function (childID, cb) {
-		orm.updateOne('children', childID, function (res) {
+		orm.niceOne(childID, function (res) {
 			cb(res);
 		});
 	},
 	deleteOne: function (childID, cb){
-		orm.deleteOne('children', childID, function (res) {
+		orm.deleteOne(childID, function (res) {
 			cb(res);
 		});
 	}

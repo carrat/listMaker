@@ -3,7 +3,10 @@
 }
 
 html {
-	background-color: #2a2c37;
+	/*background-color: #970000;*/
+	background-image: url(http://i.huffpost.com/gen/2339018/images/o-SANTA-CLAUS-LIST-facebook.jpg);
+	background-size: cover;
+	min-height: 100%;
 }
 
 body {
@@ -12,40 +15,62 @@ body {
 	font-size: 15px;
 	color: #FFFFFF;
 	margin-bottom: 0px;
-	background-color: #2a2c37;
+	/*background-color: #970000;*/
 	height: 100%;
 }
 
 a {
-	color: none;
+	color: #FFFFFF;
 	font-style: none;
 	font-variant: none;
 	text-decoration: none;
 }
 
 a:hover {
+	color: #e7324b;
 	font-style: none;
 	font-variant: none;
 	text-decoration: none;
 }
 
-.jumbotron {
-	background-color: #e7324b;
+
+
+i:hover {
+	color: #e7324b;
+	font-style: none;
+	font-variant: none;
+	text-decoration: none;
+}
+
+i {
 	color: #FFFFFF;
-	margin-top: 40px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.jumbotron {
+	background-color: #a40000;
+	color: #FFFFFF;
+	margin-top: 20px;
 	box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border: 1px solid #bc0909;
 }
 
 .jumbotron h1 {
 	color: #ffFFFF;
-	font-size: 40px;
-	font-family: 'Bitter', serif;
+	font-size: 70px;
+	font-family: 'Sacramento', cursive;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
 }
 
 .jumbotron h2 {
-	color: #2a2c37;
+	color: #c0c0c0;
 	font-size: 18px;
 	font-family: 'Bitter', serif;
+	padding-top: 0px;
+	margin-top: 0px;
 }
 
 .container {
@@ -62,10 +87,11 @@ a:hover {
 .home {
 	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 	border: 0px none;
+	padding: 20px;
 }
 
 #credits {
-	color: #e7324b;
+	color: #de1a1a;
 }
 
 #credits a {
@@ -79,20 +105,31 @@ a:hover {
 h1 {
 	color: #e7324b;
 	font-size: 40px;
-	font-family: 'Bitter', serif;
+	font-family: 'Sacramento', cursive;
+	padding-bottom: 0px;
 }
 
 h2 {
-	font-size: 20px;
+	font-size: 30px;
 	font-family: 'Bitter', serif;
 	line-height: 30px;
+	padding-bottom: 20px;
+
 
 }
 
+h2.naughty {
+	color: #bebdbd;
+}
+
 h3 {
-	padding-bottom: 20px;
+	padding-bottom: 0px;
+	padding-top: 0px;
 	font-size: 20px;
 	font-family: 'Libre Franklin', sans-serif;
+	display: inline-block;
+	padding-right: 30px;
+	margin-top: 3px;
 }
 
 h4 {
@@ -135,6 +172,15 @@ hr {
 	margin-top: 30px;
 }
 
+.listBox {
+	padding: 20px;
+	border: 1px solid #bc0909;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	background-color: #a40000;
+	box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.1);
+}
+
 .white {
 	color: #ffffff;
 }
@@ -145,18 +191,74 @@ hr {
 }
 
 .btn-primary {
-	background-color: #e7324b;
-	border: 1px solid #ad142a;
+	background-color: #e42e2e;
+	border: 1px solid #970000;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-bottom: 5px;
+	font-size: 14px;
+	box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
-	background-color: #ad142a;
-	border: 1px solid #ad142a;
+	color:#970000;
+	background-color: #ffffff;
+	border: 1px solid #970000;
+}
+
+.btn-secondary {
+	background-color: #e42e2e;
+	border: 1px solid #970000;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-bottom: 5px;
+	font-size: 10px;
+	box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+	color: #FFFFFF;
+	background-color: #000000;
+	border: 1px solid #ffffff;
 }
 
 i {
-	padding-right: 10px;
+	padding-right: 3px;
+	padding-left: 3px;
+
+}
+
+.fa {
+	font-size: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.fa-3x {
+	font-size: 30px;
+}
+
+input {
+	color: #000000;
 	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 10px;
+	box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+form {
+	display: inline-block;
+}
+
+#lists {
+	margin-bottom: 30px;
+}
+
+.btn-icon {
+	display: inline-block;
+	background-color: none;
+	background: none;
+	border: 0px none;
 }
 
 select {
@@ -169,6 +271,20 @@ select {
 	box-shadow: 9px 9px 7px rgba(0, 0, 0, 0.1);
 }
 
+label {
+	padding-right: 10px;
+}
+
+button {
+	display: inline-block;
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+	display: inline-block;
+}
+
 .footer {
 	width: 100%;
 	margin: 0px;
@@ -177,11 +293,12 @@ select {
 	padding-bottom: 0px;
 	padding-top: 10px;
 	text-align: center;
-	background-color: #262833;
+	background-color: #7b0404;
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	border-top: 1px solid #333333;
+	border-top: 1px solid #4b0404;
+	color: #de1a1a;
 
 }
 

@@ -5,39 +5,45 @@ var connection = require('./connection.js');
 var tableName = "children";
 var orderBy = "id";
 
+
 //define ORM functions
 var orm = {
 //select all from table
-	selectAll: function (tableName, orderBy, cb) {
-		connection.query('SELECT * FROM ? ORDER BY ?', [tableName, orderBy], function(err, res){
+	selectAll: function (cb) {
+		connection.query('SELECT * FROM children ORDER BY child_name asc',  function(err, res){
 			if (err) throw err;
 			cb(res);
 		});
 	},
+
 //inset one row into table
-	insertOne: function (tableName, childName, cb) {
-		connection.query('INSERT INTO ? (item_name) VALUES (?)', [tableName, {"child_name": childName}], function(err, res){
+	insertOne: function (childName, cb) {
+		console.log("Insert");
+		connection.query('INSERT INTO children SET ?', {child_name: childName}, function(err, res){
 			if (err) throw err;
 			cb(res);
 		});
 	},
 //update one row in table to naughty
-	naughtyOne: function(tableName, childID, cb){
-		connection.query('UPDATE ? SET ? VALUES (?) WHERE ?', [tableName, {"naughty": 1}, [{"id": childID}]], function(err, res){
+	naughtyOne: function(childID, cb){
+		console.log("Naughty");
+		connection.query('UPDATE children SET ? WHERE ?', [{naughty: 1}, {id: childID}], function(err, res){
 			if (err) throw err;
 			cb(res);
 		});
 	},
 //update one row in table to nice
-	niceOne: function(tableName, childID, cb){
-		connection.query('UPDATE ? SET ? VALUES (?) WHERE ?', [tableName, {"naughty": 1}, [{"id": childID}]], function(err, res){
+	niceOne: function(childID, cb){
+		console.log("Nice");
+		connection.query('UPDATE children SET ? WHERE ?', [{naughty: 0}, {id: childID}], function(err, res){
 			if (err) throw err;
 			cb(res);
 		});
 	},
 //delete one row from table
-	deleteOne: function(tableName, childID, cb){
-		connection.query('DELETE FROM ? WHERE ?', [tableName, [{"id": childID}]], function(err, res){
+	deleteOne: function(childID, cb){
+		console.log("Delete");
+		connection.query('DELETE FROM children WHERE ?', [{id: childID}], function(err, res){
 			if (err) throw err;
 			cb(res);
 		});
