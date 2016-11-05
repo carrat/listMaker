@@ -107,7 +107,7 @@ i {
 }
 
 #credits {
-	color: #6b0101;
+	color: #bebdbd;
 }
 
 .santa {
@@ -136,7 +136,8 @@ h2 {
 	font-size: 40px;
 	font-family: 'Satisfy', cursive;
 	line-height: 30px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
 
 
 }
@@ -200,7 +201,7 @@ hr {
 	border: 1px solid #bc0909;
 	padding-right: 10px;
 	padding-bottom: 10px;
-	background-color: #a40000;
+	
 	box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.1);
 }
 
